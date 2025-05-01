@@ -19,21 +19,6 @@ struct TreeMap {
     int (*lower_than) (void* key1, void* key2);
 };
 
-int lower_than_int(void* key1, void* key2)
-{
-    int llave1 = *(int*) key1;
-    int llave2 = *(int*) key2;
-
-    // Caso 1: llave1 es menor que llave2
-    if (llave1 < llave2) return -1;
-
-    // Caso 2: llave1 es mayor que llave2
-    if (llave1 > llave2) return 1;
-
-    // Caso 3: llave1 es igual a llave2
-    return 0;
-}
-
 int is_equal(TreeMap* tree, void* key1, void* key2){
     if(tree->lower_than(key1,key2)==0 &&  
         tree->lower_than(key2,key1)==0) return 1;
