@@ -19,3 +19,18 @@ treemap.c:22:5: note: previous definition of 'lower_than_int' was here
  int lower_than_int(void* key1, void* key2)
      ^~~~~~~~~~~~~~
 3577b09
+Thu, May  1, 2025  6:31:30 PM: 
+ treemap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+test.c:6:8: warning: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+ char * _strdup(const char * str) {
+        ^~~~~~~
+test.c:52:5: error: redefinition of 'lower_than_int'
+ int lower_than_int(void* key1, void* key2){
+     ^~~~~~~~~~~~~~
+In file included from test.c:4:
+treemap.c:22:5: note: previous definition of 'lower_than_int' was here
+ int lower_than_int(void* key1, void* key2)
+     ^~~~~~~~~~~~~~
+40addd6

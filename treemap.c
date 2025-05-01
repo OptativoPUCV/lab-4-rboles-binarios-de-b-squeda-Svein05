@@ -57,7 +57,7 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2))
     if (new == NULL) return NULL;
     new->root = NULL;
     new->current = NULL;
-    new->lower_than = lower_than_int;
+    new->lower_than = lower_than;
 
     return new;
 }
@@ -97,11 +97,11 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
             return aux->pair;
         }
         
-        if (lower_than_int(key, aux->pair->key) == -1)
+        if (tree->lower_than(key, aux->pair->key))
         {
             aux = aux->left;
         }
-        else if (lower_than_int(key, aux->pair->key) == 1)
+        else
         {
             aux = aux->right;
         }
