@@ -80,7 +80,9 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
         padre->left = newNodo;
     else
         padre->right = newNodo;
-        
+
+    tree->current = newNodo;
+    
     return;
 }
 
