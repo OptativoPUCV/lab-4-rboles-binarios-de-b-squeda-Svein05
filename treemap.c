@@ -200,7 +200,7 @@ Pair * firstTreeMap(TreeMap * tree)
 {
     if (tree == NULL || tree->root == NULL) return NULL;
     
-    TreeNode* minimo = minimun(tree, tree->root);
+    TreeNode* minimo = minimum(tree->root);
     tree->current = minimo;
 
     return minimo->pair;

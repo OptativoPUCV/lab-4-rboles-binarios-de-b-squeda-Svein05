@@ -116,3 +116,8 @@ C:\Users\elias\AppData\Local\Temp\ccEGGT5Z.o: In function `firstTreeMap':
 C:\Users\elias\Documents\GitHub\lab-4-rboles-binarios-de-b-squeda-Svein05/treemap.c:203: undefined reference to `minimun'
 collect2.exe: error: ld returned 1 exit status
 0c762ff
+Sat, May  3, 2025  6:11:05 PM: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+83a0f58
