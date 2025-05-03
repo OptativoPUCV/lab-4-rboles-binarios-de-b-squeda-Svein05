@@ -201,14 +201,15 @@ Pair * firstTreeMap(TreeMap * tree)
     if (tree == NULL || tree->root == NULL) return NULL;
     
     TreeNode* minimo = minimum(tree->root);
-    tree->current = minimo;
+    if (minimo == NULL) return NULL;
 
+    tree->current = minimo;
     return minimo->pair;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
     
-    if (tree == NULL || tree->root == NULL) return NULL;
+    if (tree == NULL || tree->root == NULL || tree->current == NULL) return NULL;
 
     TreeNode* actual = tree->current;
 
