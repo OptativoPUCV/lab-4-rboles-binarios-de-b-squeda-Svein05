@@ -199,21 +199,21 @@ Pair * upperBound(TreeMap * tree, void* key) {
 Pair * firstTreeMap(TreeMap * tree) 
 {
     if (tree == NULL || tree->root == NULL) return NULL;
-    
+
     TreeNode* minimo = minimum(tree->root);
-    if (minimo == NULL) return NULL;
+    if (minimo == NULL) return NULL; // Verifica si minimo es NULL
 
     tree->current = minimo;
     return minimo->pair;
 }
 
-Pair * nextTreeMap(TreeMap * tree) {
-    
+Pair * nextTreeMap(TreeMap * tree) 
+{
     if (tree == NULL || tree->root == NULL || tree->current == NULL) return NULL;
 
     TreeNode* actual = tree->current;
 
-    if (actual->right != NULL)
+    if (actual->right != NULL) 
     {
         TreeNode* minimo = minimum(actual->right);
         tree->current = minimo;
@@ -221,12 +221,12 @@ Pair * nextTreeMap(TreeMap * tree) {
     }
 
     TreeNode* padre = actual->parent;
-    while (padre != NULL && actual == padre->right)
+    while (padre != NULL && actual == padre->right) 
     {
         actual = padre;
         padre = padre->parent;
     }
 
     tree->current = padre;
-    return padre->pair;
+    return padre != NULL ? padre->pair : NULL; // Verifica si padre es NULL
 }
