@@ -80,3 +80,22 @@ Sat, May  3, 2025  5:59:34 PM:
  tests:  18|3
 total_score: 40/70
 e6898f5
+Sat, May  3, 2025  6:09:40 PM: 
+ treemap.c | 32 +++++++++++++++++++++++++++++---
+ 1 file changed, 29 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function 'firstTreeMap':
+treemap.c:203:24: warning: implicit declaration of function 'minimun'; did you mean 'minimum'? [-Wimplicit-function-declaration]
+     TreeNode* minimo = minimun(tree, tree->root);
+                        ^~~~~~~
+                        minimum
+treemap.c:203:24: warning: initialization of 'TreeNode *' {aka 'struct TreeNode *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+test.c: At top level:
+test.c:6:8: warning: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+ char * _strdup(const char * str) {
+        ^~~~~~~
+C:\Users\elias\AppData\Local\Temp\ccnMIffz.o: In function `firstTreeMap':
+C:\Users\elias\Documents\GitHub\lab-4-rboles-binarios-de-b-squeda-Svein05/treemap.c:203: undefined reference to `minimun'
+collect2.exe: error: ld returned 1 exit status
+fedb7f0
